@@ -1,7 +1,7 @@
-function newbook() {
+function Newbook() {
   const Title = document.getElementById('Title');
   const Author = document.getElementById('Author');
-  let newdiv = document.createElement('div');
+  const newdiv = document.createElement('div');
   newdiv.setAttribute('id', 'book_infos');
   const par1 = document.createElement('p');
   const par2 = document.createElement('p');
@@ -15,7 +15,7 @@ function newbook() {
   document.getElementById('list_container').appendChild(newdiv).appendChild(buutt);
 }
 
-function newbook_remove() {
-  const book_container = document.getElementById('book_infos');
-  book_container.parentElement.removeChild(book_container);
+function Newbook_Remove() {
+  const Book_Container = document.getElementById('book_infos');
+  Book_Container.parentElement.removeChild(Book_Container);
 }
