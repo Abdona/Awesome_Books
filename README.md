@@ -28,8 +28,8 @@
 
 👤 **Abdulrahman**
 
-- GitHub: [@Mwila-Kaunda](https://github.com/Abdona)
-- LinkedIn: [Mwila Kaunda](https://www.linkedin.com/in/abdulrahman-nasser-2b7173131/)
+- GitHub: [@Abdona](https://github.com/Abdona)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdulrahman-nasser-2b7173131/)
 
 ## 🤝 Contributing
 
