@@ -20,3 +20,12 @@ function newbook() {
 function remove() {
     alert("gggg")
 }
+
+function newbook_remove () {
+    let book_infos = document.querySelector("p")
+    book_infos.parentElement.removeChild(book_infos);
+    
+}
+
+const remove_button = document.getElementsByClassName("Remove");
+remove_button.addEventListener(onclick, newbook_remove())
