@@ -2,6 +2,7 @@ function newbook() {
     var title_name = document.getElementById("Title")
     var Author_name = document.getElementById("Author")
     var newdiv=document.createElement("div")
+    newdiv.setAttribute("id", "book_infos")
     var par1 = document.createElement("p");
     var par2 = document.createElement("p");
     var buutt= document.createElement("button");
@@ -17,15 +18,10 @@ function newbook() {
 //$(document).on('click','#rem',function(){alert("ssafasf")})
 // document.getElementById("rem").addEventListener("click", remove_book());
 // document.querySelector("#list_container").addEventListener('click', remove_book())
-function remove() {
-    alert("gggg")
-}
+
 
 function newbook_remove () {
-    let book_infos = document.querySelector("p")
-    book_infos.parentElement.removeChild(book_infos);
-    
+    var book_container = document.getElementById("book_infos");
+    book_container.parentElement.removeChild(book_container)
 }
 
-const remove_button = document.getElementsByClassName("Remove");
-remove_button.addEventListener(onclick, newbook_remove())
