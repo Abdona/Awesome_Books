@@ -2,7 +2,7 @@
 
 > This project is a presentation of working with Javascript objects 
 
-![screenshot]()
+
 
 
 
