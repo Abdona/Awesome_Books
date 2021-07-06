@@ -13,6 +13,7 @@ function Newbook() {
   document.getElementById('list_container').appendChild(newdiv).appendChild(par1);
   document.getElementById('list_container').appendChild(newdiv).appendChild(par2);
   document.getElementById('list_container').appendChild(newdiv).appendChild(buutt);
+  
 }
 
 function Newbook_Remove() {
