@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Abdona/Awesome_Books/issues"
   },
-  "homepage": "https://github.com/Abdona/Awesome_Books#readme"
+  "homepage": "https://github.com/Abdona/Awesome_Books#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
 }
