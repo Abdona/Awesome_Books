@@ -1,20 +1,22 @@
 let Books = [];
-const BookList = JSON.stringify(Books);
-let SavedData = localStorage.setItem('library', BookList);
+let SavedData = localStorage.setItem('library', '');
 
+function SaveLocally(BookArray) {
+  const BookList = JSON.stringify(BookArray);
+  SavedData = localStorage.setItem('library', BookList);
+}
 function NewbookRemove(RButton) {
-  // const ID = GetClickedId();
   const BookContainer = document.getElementById(RButton.id);
-
   BookContainer.parentNode.removeChild(BookContainer);
-  Books = Books.filter((item) => {
-    if (item.id !== RButton.id) {
-      return item;
-    }
-    
+  /* eslint-disable */ 
+  const BooksNew = Books.filter(function (item) {
+    return item.id != RButton.id;
   });
-  localStorage.clear(SavedData);
-  const BookList = JSON.stringify(Books);
+  /* eslint-enable */
+  Books = BooksNew;
+  localStorage.clear();
+  const BookList = JSON.stringify(BooksNew);
+  // eslint-disable-next-line no-unused-vars
   SavedData = localStorage.setItem('library', BookList);
 }
 function ShowBook(div, p1, p2, rmvbutt) {
@@ -28,6 +30,7 @@ function Newbook() {
   const Author = document.getElementById('Author');
   const IdBook = Math.floor(Math.random() * 1000);
   Books.push({ title: Title.value, author: Author.value, id: IdBook });
+  SaveLocally(Books);
   const newdiv = document.createElement('div');
   newdiv.setAttribute('id', IdBook);
   const par1 = document.createElement('p');
