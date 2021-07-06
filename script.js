@@ -1,4 +1,5 @@
 let Books = [];
+// eslint-disable-next-line no-unused-vars
 let SavedData = localStorage.setItem('library', '');
 
 function SaveLocally(BookArray) {
