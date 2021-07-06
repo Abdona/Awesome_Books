@@ -1,8 +1,21 @@
-const Books = [];
+let Books = [];
+const BookList = JSON.stringify(Books);
+let SavedData = localStorage.setItem('library', BookList);
+
 function NewbookRemove(RButton) {
   // const ID = GetClickedId();
   const BookContainer = document.getElementById(RButton.id);
+
   BookContainer.parentNode.removeChild(BookContainer);
+  Books = Books.filter((item) => {
+    if (item.id !== RButton.id) {
+      return item;
+    }
+    
+  });
+  localStorage.clear(SavedData);
+  const BookList = JSON.stringify(Books);
+  SavedData = localStorage.setItem('library', BookList);
 }
 function ShowBook(div, p1, p2, rmvbutt) {
   document.getElementById('list_container').appendChild(div).appendChild(p1);
