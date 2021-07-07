@@ -41,7 +41,7 @@ function RetrieveOld() {
 function ShowBook() {
   RetrieveOld();
   const BooksCurrent = JSON.parse(localStorage.getItem('library'));
-    /* eslint-disable */ 
+  /* eslint-disable */
   BooksCurrent.forEach(element => {
     const x = CreateHtml(element.id);
     x[1].innerHTML = `Title:   ${element.title}`
@@ -50,7 +50,7 @@ function ShowBook() {
     document.getElementById('list_container').appendChild(x[0]).appendChild(x[2]);
     document.getElementById('list_container').appendChild(x[0]).appendChild(x[3]);
   });
-    /* eslint-enable */ 
+  /* eslint-enable */
 }
 // eslint-disable-next-line no-unused-vars
 function Newbook() {
