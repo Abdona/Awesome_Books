@@ -27,7 +27,7 @@ function CreateHtml(IdBook) {
   RemoveButt.addEventListener('click', () => { NewbookRemove(RemoveButt); });
   RemoveButt.textContent = 'remove';
   RemoveButt.setAttribute('id', IdBook);
-  return [newdiv, title, author, RemoveButt,'hello'];
+  return [newdiv, title, author, RemoveButt];
 }
 function SaveLocally(BookArray) {
   const BookList = JSON.stringify(BookArray);
@@ -41,14 +41,16 @@ function RetrieveOld() {
 function ShowBook() {
   RetrieveOld();
   const BooksCurrent = JSON.parse(localStorage.getItem('library'));
+    /* eslint-disable */ 
   BooksCurrent.forEach(element => {
     const x = CreateHtml(element.id);
-    x[1].innerHTML = 'Title:    ' + element.title;
-    x[2].innerHTML = 'Author:    ' + element.author;
+    x[1].innerHTML = `Title:   ${element.title}`
+    x[2].innerHTML = `Author:   ${element.author}`;
     document.getElementById('list_container').appendChild(x[0]).appendChild(x[1]);
     document.getElementById('list_container').appendChild(x[0]).appendChild(x[2]);
     document.getElementById('list_container').appendChild(x[0]).appendChild(x[3]);
   });
+    /* eslint-enable */ 
 }
 // eslint-disable-next-line no-unused-vars
 function Newbook() {
@@ -58,8 +60,8 @@ function Newbook() {
   Books.push({ title: Title.value, author: Author.value, id: IdBook });
   SaveLocally(Books);
   const x = CreateHtml(IdBook);
-  x[1].innerHTML = 'Title:    ' + Title.value;
-  x[2].innerHTML = 'Author:    ' + Author.value;
+  x[1].innerHTML = `Title:      ${Title.value}`;
+  x[2].innerHTML = `Author:      ${Author.value}`;
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[1]);
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[2]);
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[3]);
