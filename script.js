@@ -1,8 +1,22 @@
+class Storage{
+  constructor(name){
+    this.name=name;
+    localStorage.setItem(this.name)
+  }
+  AddToStorage(Data)
+  {
+    alert('ss')
+    localStorage.setItem(this.name,JSON.stringify(Data));
+  }
+}
 class Books {
   constructor(title,author,id){
     this.title = title;
     this.author = author;
     this.id = id;
+    let Book={title: this.title, author: this.author,id: this.id}
+    let BookListArray = [];
+    BookListArray.push(Book);
   }
 
   AddBook() {
@@ -18,7 +32,12 @@ class Books {
        document.getElementById('list_container').appendChild(BookContainer).appendChild(TitleP);
        document.getElementById('list_container').appendChild(BookContainer).appendChild(AuthorP);
        document.getElementById('list_container').appendChild(BookContainer).appendChild(RButton);
+       this.SaveData();
 
+  }
+  SaveData() {
+    BookCollection = new Storage ('library');
+    BookCollection.AddToStorage(BookListArray);
   }
 
 }
