@@ -1,4 +1,3 @@
-alert('Void')
 class Books {
   constructor(title,author,id){
     this.title = title;
@@ -7,35 +6,31 @@ class Books {
   }
 
   AddBook() {
-       let title = document.createElement('p');
-       let Author = document.createElement('p')
+       let TitleP = document.createElement('p');
+       let AuthorP = document.createElement('p')
        let RButton = document.createElement('button')
        RButton.innerHTML = "Remove"
        RButton.setAttribute('id', this.id) 
        let BookContainer = document.createElement('div')
        BookContainer.setAttribute('id', this.id)
-       title.innerHTML = this.title
-       Author.innerHTML = this.author
-       BookContainer.appendChild(title.value).appendChild(Author.value)
-       BookContainer.appendChild(RButton)
-       document.getElementById('list_container').appendChild(BookContainer)
-       
+       TitleP.innerHTML = `Title:   ${this.title}`
+       AuthorP.innerHTML = `Author:   ${this.author}`;
+       document.getElementById('list_container').appendChild(BookContainer).appendChild(TitleP);
+       document.getElementById('list_container').appendChild(BookContainer).appendChild(AuthorP);
+       document.getElementById('list_container').appendChild(BookContainer).appendChild(RButton);
 
   }
 
 }
 
 function AddNewbook() {
-    
-    const IdBook = Math.floor(Math.random() * 1000);
-    const title = document.getElementById('Title').value;
-    const author = document.getElementById('Author').value;
-    
-    let Newbook = New Books(title, author, IdBook) ;
-    Newbook.AddBook();
-    
+  const title = document.getElementById('Title');
+  const author = document.getElementById('Author');
+  const IdBook = Math.floor(Math.random() * 1000);
+  let NewBook = new Books(title.value, author.value, IdBook);
+  NewBook.AddBook();
+  
 }
-
 
 
 // let Books = [];
