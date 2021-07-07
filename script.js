@@ -1,10 +1,43 @@
+alert('Void')
 class Books {
   constructor(title,author,id){
     this.title = title;
     this.author = author;
     this.id = id;
   }
+
+  AddBook() {
+       let title = document.createElement('p');
+       let Author = document.createElement('p')
+       let RButton = document.createElement('button')
+       RButton.innerHTML = "Remove"
+       RButton.setAttribute('id', this.id) 
+       let BookContainer = document.createElement('div')
+       BookContainer.setAttribute('id', this.id)
+       title.innerHTML = this.title
+       Author.innerHTML = this.author
+       BookContainer.appendChild(title.value).appendChild(Author.value)
+       BookContainer.appendChild(RButton)
+       document.getElementById('list_container').appendChild(BookContainer)
+       
+
+  }
+
 }
+
+function AddNewbook() {
+    
+    const IdBook = Math.floor(Math.random() * 1000);
+    const title = document.getElementById('Title').value;
+    const author = document.getElementById('Author').value;
+    
+    let Newbook = New Books(title, author, IdBook) ;
+    Newbook.AddBook();
+    
+}
+
+
+
 // let Books = [];
 // function NewbookRemove(RButton) {
 //   const BookContainer = document.getElementById(RButton.id);
