@@ -17,7 +17,7 @@ function NewbookRemove(RButton) {
 function Clear() {
   localStorage.clear();
   Books = [];
-  document.getElementById('list_container').innerHTML='';
+  document.getElementById('list_container').innerHTML = '';
 }
 function CreateHtml(IdBook) {
   const newdiv = document.createElement('div');
