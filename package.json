@@ -1,0 +1,25 @@
+{
+  "name": "awesome_books",
+  "version": "1.0.0",
+  "description": "> This project is a presentation of working with Javascript objects",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdona/Awesome_Books.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdona/Awesome_Books/issues"
+  },
+  "homepage": "https://github.com/Abdona/Awesome_Books#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
