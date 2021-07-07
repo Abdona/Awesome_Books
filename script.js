@@ -21,13 +21,13 @@ function Clear() {
 function CreateHtml(IdBook) {
   const newdiv = document.createElement('div');
   newdiv.setAttribute('id', IdBook);
-  const par1 = document.createElement('p');
-  const par2 = document.createElement('p');
+  const title = document.createElement('p');
+  const author = document.createElement('p');
   const RemoveButt = document.createElement('button');
   RemoveButt.addEventListener('click', () => { NewbookRemove(RemoveButt); });
   RemoveButt.textContent = 'remove';
   RemoveButt.setAttribute('id', IdBook);
-  return [newdiv, par1, par2, RemoveButt];
+  return [newdiv, title, author, RemoveButt,'hello'];
 }
 function SaveLocally(BookArray) {
   const BookList = JSON.stringify(BookArray);
@@ -42,16 +42,12 @@ function ShowBook() {
   RetrieveOld();
   const BooksCurrent = JSON.parse(localStorage.getItem('library'));
   BooksCurrent.forEach(element => {
-    alert(element.id);
     const x = CreateHtml(element.id);
-    x[1].appendChild(document.createTextNode(element.title));
-    x[2].appendChild(document.createTextNode(element.author));
-    const ListContainer = document.querySelector('#list_container');
-    document.ListContainer.appendChild(x[0][0]);
-    alert("ddd");
-    // document.ListContainer.appendChild(x[0]).appendChild(x[1]);
-    // document.ListContainer.appendChild(x[0]).appendChild(x[2]);
-    // document.ListContainer.appendChild(x[0]).appendChild(x[3]);
+    x[1].innerHTML = 'Title:    ' + element.title;
+    x[2].innerHTML = 'Author:    ' + element.author;
+    document.getElementById('list_container').appendChild(x[0]).appendChild(x[1]);
+    document.getElementById('list_container').appendChild(x[0]).appendChild(x[2]);
+    document.getElementById('list_container').appendChild(x[0]).appendChild(x[3]);
   });
 }
 // eslint-disable-next-line no-unused-vars
@@ -62,11 +58,10 @@ function Newbook() {
   Books.push({ title: Title.value, author: Author.value, id: IdBook });
   SaveLocally(Books);
   const x = CreateHtml(IdBook);
-  x[1].appendChild(document.createTextNode(Title.value));
-  x[2].appendChild(document.createTextNode(Author.value));
+  x[1].innerHTML = 'Title:    ' + Title.value;
+  x[2].innerHTML = 'Author:    ' + Author.value;
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[1]);
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[2]);
   document.getElementById('list_container').appendChild(x[0]).appendChild(x[3]);
 }
 ShowBook();
-// //for loop over library
