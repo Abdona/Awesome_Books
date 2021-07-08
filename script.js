@@ -12,7 +12,6 @@ class Book {
        let TitleP = document.createElement('p');
        let AuthorP = document.createElement('p')
        let RButton = document.createElement('button')
-      //  alert('hhhhh')
        RButton.addEventListener('click', () => { this.RemoveBook(this.id); });
        RButton.innerHTML = "Remove"
        RButton.setAttribute('id', this.id) 
@@ -27,12 +26,13 @@ class Book {
       RemoveBook(BookId) {
         const BookContainer = document.getElementById(BookId);
         BookContainer.parentNode.removeChild(BookContainer);
-        /* eslint-disable */ 
-        const BooksNew = (this.BookListCollection).filter(function (item) {
-          return item.id != BookdId;
-        });
-        /* eslint-enable */
-        alert(this.BookListCollection.length);
+        let BooksNew=[];
+        for (let i in this.BookListCollection)
+        {
+          if(this.BookListCollection[i].id != BookId){
+            BooksNew.push(this.BookListCollection[i]);
+          }
+        }
         this.BookListCollection = BooksNew;
         localStorage.clear();
         const BookList = JSON.stringify(this.BookListCollection);
@@ -41,11 +41,11 @@ class Book {
       }
       AddToStorage(Data)
       {
-        // Data.push(JSON.parse(BookCollection));
         localStorage.setItem('library',JSON.stringify(this.BookListCollection));
       }
     
 }
+
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
@@ -56,6 +56,7 @@ function AddNewbook() {
 }
 function Clear(params) {
   localStorage.clear();
+  document.getElementById('list_container').innerHTML='';
   
 }
 
