@@ -18,6 +18,7 @@ class BookList {
     RButton.addEventListener('click', () => { this.RemoveBook(Book.id); });
     RButton.innerHTML = 'Remove';
     RButton.setAttribute('id', Book.id);
+    RButton.setAttribute('class', 'rmv-btn');
     const BookContainer = document.createElement('div');
     BookContainer.setAttribute('id', Book.id);
     TitleP.innerHTML = `Title:   ${Book.title}`;

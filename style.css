@@ -27,6 +27,13 @@ h1 {
    
 }
 
+.rmv-btn {
+    width: 65px;
+    height: 30px;
+    background-color: #fff;
+    box-shadow: 5px 5px 2px black;
+}
+
 
 input {  
     width: 450px;
