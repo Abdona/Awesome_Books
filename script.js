@@ -55,7 +55,7 @@ class BookList {
     const title = document.createElement('p');
     const author = document.createElement('p');
     const RemoveButt = document.createElement('button');
-    RemoveButt.addEventListener('click', () => { RemoveBook(this.BookListCollection[i].id); });
+    RemoveButt.addEventListener('click', () => { this.RemoveBook(this.BookListCollection[i].id); });
     RemoveButt.textContent = 'remove';
     RemoveButt.setAttribute('id', this.BookListCollection[i].id);
     title.innerHTML = `Title:   ${this.BookListCollection[i].title}`;
