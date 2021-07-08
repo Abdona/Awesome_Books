@@ -30,12 +30,13 @@ class BookList {
     const BookContainer = document.getElementById(BookId);
     BookContainer.parentNode.removeChild(BookContainer);
     const BooksNew = [];
+    /* eslint-disable */
     for (const i in this.BookListCollection) {
       if (this.BookListCollection[i].id !== BookId) {
         BooksNew.push(this.BookListCollection[i]);
-        }
-
+      }
     }
+     /* eslint-enable */
     this.BookListCollection = BooksNew;
     localStorage.clear();
     const BookList = JSON.stringify(BooksNew);
@@ -46,7 +47,7 @@ class BookList {
   AddToStorage() {
     localStorage.setItem('library', JSON.stringify(this.BookListCollection));
   }
-
+  /* eslint-disable */
   ShowBooks() {
     for (const i in this.BookListCollection) {
       const newdiv = document.createElement('div');
@@ -72,6 +73,7 @@ class Book {
     this.id = id;
   }
 }
+ /* eslint-enable */
 const NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
 // eslint-disable-next-line no-unused-vars
