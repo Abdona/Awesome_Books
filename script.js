@@ -17,7 +17,7 @@ class BookList {
     RButton.addEventListener('click', () => { this.RemoveBook(Book.id); });
     RButton.innerHTML = 'Remove';
     RButton.setAttribute('id', Book.id);
-    let BookContainer = document.createElement('div');
+    const BookContainer = document.createElement('div');
     BookContainer.setAttribute('id', Book.id);
     TitleP.innerHTML = `Title:   ${Book.title}`;
     AuthorP.innerHTML = `Author:   ${Book.author}`;
@@ -33,7 +33,7 @@ class BookList {
     for (const i in this.BookListCollection) {
       if (this.BookListCollection[i].id !== BookId) {
         BooksNew.push(this.BookListCollection[i]);
-      }
+        }
 
     }
     this.BookListCollection = BooksNew;
@@ -48,7 +48,7 @@ class BookList {
   }
 
   ShowBooks() {
-    for (let i in this.BookListCollection) {
+    for (const i in this.BookListCollection) {
       const newdiv = document.createElement('div');
       newdiv.setAttribute('id', this.BookListCollection[i].id);
       const title = document.createElement('p');
@@ -72,14 +72,14 @@ class Book {
     this.id = id;
   }
 }
-let NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
+const NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
 // eslint-disable-next-line no-unused-vars
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
   const IdBook = Math.floor(Math.random() * 1000);
-  let NewBook = new Book(title.value, author.value, IdBook);
+  const NewBook = new Book(title.value, author.value, IdBook);
   NewBookCollection.AddBook(NewBook);
   NewBookCollection.AddToStorage();
 }
