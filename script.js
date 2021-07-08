@@ -1,31 +1,54 @@
 class BookList {
-  constructor(Books){
+  constructor(Books) {
     this.BookListCollection = Books;
   }
-  clear(){
+  clear() {
     localStorage.clear('library');
-    document.getElementById('list_container').innerHTML='';
-    this.BookListCollection=[];
+    document.getElementById('list_container').innerHTML = '';
+    this.BookListCollection = [];
   }
 
   AddBook(Book) {
     this.BookListCollection.push(Book);
-    let TitleP = document.createElement('p');
-    let AuthorP = document.createElement('p')
-    let RButton = document.createElement('button')
+    const TitleP = document.createElement('p');
+    const AuthorP = document.createElement('p');
+    const RButton = document.createElement('button');
     RButton.addEventListener('click', () => { this.RemoveBook(Book.id); });
-    RButton.innerHTML = "Remove"
-    RButton.setAttribute('id', Book.id) 
-    let BookContainer = document.createElement('div')
-    BookContainer.setAttribute('id', Book.id)
-    TitleP.innerHTML = `Title:   ${Book.title}`
+    RButton.innerHTML = 'Remove';
+    RButton.setAttribute('id', Book.id) ;
+    let BookContainer = document.createElement('div');
+    BookContainer.setAttribute('id', Book.id);
+    TitleP.innerHTML = `Title:   ${Book.title}`;
     AuthorP.innerHTML = `Author:   ${Book.author}`;
     document.getElementById('list_container').appendChild(BookContainer).appendChild(TitleP);
     document.getElementById('list_container').appendChild(BookContainer).appendChild(AuthorP);
     document.getElementById('list_container').appendChild(BookContainer).appendChild(RButton);
    }
-   ShowBooks()
-   {
+
+   RemoveBook(BookId) {
+    const BookContainer = document.getElementById(BookId);
+    BookContainer.parentNode.removeChild(BookContainer);
+    const BooksNew = [];
+    for (const i in this.BookListCollection)
+    {
+      if (this.BookListCollection[i].id !== BookId) {
+        BooksNew.push(this.BookListCollection[i]);
+      }
+    };
+    this.BookListCollection = BooksNew;
+    localStorage.clear();
+    const BookList = JSON.stringify(BooksNew);
+    // eslint-disable-next-line no-unused-vars
+    localStorage.setItem('library', BookList);
+  }
+
+  AddToStorage()
+  {
+    localStorage.setItem('library', JSON.stringify(this.BookListCollection));
+  }
+
+  ShowBooks()
+   {  
   // /* eslint-disable */
   for (let i in this.BookListCollection)
   {
@@ -35,35 +58,14 @@ class BookList {
     const author = document.createElement('p');
     const RemoveButt = document.createElement('button');
     RemoveButt.addEventListener('click', () => { this.RemoveBook(this.BookListCollection[i].id); });
-    RemoveButt.innerHTML = 'Remove';
+    RemoveButt.textContent = 'remove';
     RemoveButt.setAttribute('id', this.BookListCollection[i].id);
     title.innerHTML = `Title:   ${this.BookListCollection[i].title}`;
     author.innerHTML = `Author:   ${this.BookListCollection[i].author}`;
     document.getElementById('list_container').appendChild(newdiv).appendChild(title);
     document.getElementById('list_container').appendChild(newdiv).appendChild(author);
     document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
-  }}
-   RemoveBook(BookId) {
-    alert('dddd')
-    const BookContainer = document.getElementById(BookId);
-    BookContainer.parentNode.removeChild(BookContainer);
-    let BooksNew=[];
-    for (let i in this.BookListCollection)
-    {
-      if(this.BookListCollection[i].id != BookId){
-        BooksNew.push(this.BookListCollection[i]);
-      }
-    }
-    this.BookListCollection = BooksNew;
-    localStorage.clear();
-    const BookList = JSON.stringify(BooksNew);
-    // eslint-disable-next-line no-unused-vars
-    localStorage.setItem('library', BookList);
-  }
-  AddToStorage()
-  {
-    localStorage.setItem('library',JSON.stringify(this.BookListCollection));
-  }
+  };}
 }
 class Book {
   constructor(title,author,id){
