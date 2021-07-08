@@ -27,8 +27,8 @@
 👤 **Anass**
 
 - Twitter: [@twitterhandle](https://twitter.com/rockerbell)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anass-tantane/)
-- GitHub: [@githubhandle](https://github.com/rockerbell)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/anass-tantane/)
+- GitHub: [@github](https://github.com/rockerbell)
 
 👤 **Abdulrahman**
 
