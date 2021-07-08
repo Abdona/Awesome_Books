@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Awesome Books</title>
 </head>
 <body>
     <h1>Awesome Books</h1>
+    <div id="list_container" ></div>
+    <div class="InputContainer">
+        <h1>Add a new Book</h1>
     <input type="text" id="Title" placeholder="Title">
     <input type="text" id="Author" placeholder="Author">
-    <p id="BooksArray"></p> 
-    <button onclick="AddNewbook()">Add</button> <button onclick="Clear()">Clear</button>
-    <div id="list_container" ></div>
+    <button id="AddNewbook">Add</button> <button id="Clear">Clear</button></div>
     <script type = "text/javascript" src="script.js"></script> 
 </body> 
 </html>
