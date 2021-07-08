@@ -19,8 +19,6 @@
     }]
   },
   
-  "max-classes-per-file": "off",
-
   "ignorePatterns": [
     "dist/",
     "build/"
