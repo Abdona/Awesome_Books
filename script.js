@@ -7,7 +7,7 @@ class BookList {
     document.getElementById('list_container').innerHTML='';
     this.BookListCollection=[];
   }
-  
+
   AddBook(Book) {
     this.BookListCollection.push(Book);
     let TitleP = document.createElement('p');
@@ -24,7 +24,27 @@ class BookList {
     document.getElementById('list_container').appendChild(BookContainer).appendChild(AuthorP);
     document.getElementById('list_container').appendChild(BookContainer).appendChild(RButton);
    }
+   ShowBooks()
+   {
+  // /* eslint-disable */
+  for (let i in this.BookListCollection)
+  {
+    const newdiv = document.createElement('div');
+    newdiv.setAttribute('id', this.BookListCollection[i].id);
+    const title = document.createElement('p');
+    const author = document.createElement('p');
+    const RemoveButt = document.createElement('button');
+    RemoveButt.addEventListener('click', () => { this.RemoveBook(this.BookListCollection[i].id); });
+    RemoveButt.innerHTML = 'Remove';
+    RemoveButt.setAttribute('id', this.BookListCollection[i].id);
+    title.innerHTML = `Title:   ${this.BookListCollection[i].title}`;
+    author.innerHTML = `Author:   ${this.BookListCollection[i].author}`;
+    document.getElementById('list_container').appendChild(newdiv).appendChild(title);
+    document.getElementById('list_container').appendChild(newdiv).appendChild(author);
+    document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
+  }}
    RemoveBook(BookId) {
+     alert('ddd')
     const BookContainer = document.getElementById(BookId);
     BookContainer.parentNode.removeChild(BookContainer);
     let BooksNew=[];
@@ -44,26 +64,6 @@ class BookList {
   {
     localStorage.setItem('library',JSON.stringify(this.BookListCollection));
   }
-  ShowBooks()
-   {
-     
-  // /* eslint-disable */
-  for (let i in this.BookListCollection)
-  {
-    const newdiv = document.createElement('div');
-    newdiv.setAttribute('id', this.BookListCollection[i].id);
-    const title = document.createElement('p');
-    const author = document.createElement('p');
-    const RemoveButt = document.createElement('button');
-    RemoveButt.addEventListener('click', () => { RemoveBook(this.BookListCollection[i].id); });
-    RemoveButt.textContent = 'remove';
-    RemoveButt.setAttribute('id', this.BookListCollection[i].id);
-    title.innerHTML = `Title:   ${this.BookListCollection[i].title}`;
-    author.innerHTML = `Author:   ${this.BookListCollection[i].author}`;
-    document.getElementById('list_container').appendChild(newdiv).appendChild(title);
-    document.getElementById('list_container').appendChild(newdiv).appendChild(author);
-    document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
-  }}
 }
 class Book {
   constructor(title,author,id){
