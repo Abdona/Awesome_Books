@@ -18,6 +18,7 @@ class BookList {
     RButton.addEventListener('click', () => { this.RemoveBook(Book.id); });
     RButton.innerHTML = 'Remove';
     RButton.setAttribute('id', Book.id);
+    RButton.setAttribute('class', 'rmv-btn');
     const BookContainer = document.createElement('div');
     BookContainer.setAttribute('id', Book.id);
     TitleP.innerHTML = `Title:   ${Book.title}`;
@@ -77,6 +78,7 @@ class Book {
  /* eslint-enable */
 const NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
+// eslint-disable-next-line no-unused-vars
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
@@ -85,8 +87,7 @@ function AddNewbook() {
   NewBookCollection.addBook(NewBook);
   NewBookCollection.AddToStorage();
 }
-function Clear() {
+// eslint-disable-next-line no-unused-vars
+function Clear(params) {
   NewBookCollection.clear();
 }
-document.getElementById('AddNewbook').onclick = AddNewbook;
-document.getElementById('Clear').onclick = Clear;
