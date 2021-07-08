@@ -5,7 +5,6 @@ body {
   
 }
 
-
 h1 {
     text-align: center;
     color: black;
@@ -13,9 +12,8 @@ h1 {
     font-size: 30px;
 }
 
-
-
 #list_container {
+    font-weight: bold;
     display: block;
     margin: 10px 10px;
     border: 1px solid #ccc;
@@ -24,7 +22,6 @@ h1 {
 
 .BooksContainer {
     border: 1px solid black;
-   
 }
 
 .rmv-btn {
@@ -41,7 +38,6 @@ input {
     text-align: center;
     box-shadow: 7px 5px 2px black;
     display: flex;
-    margin: 15px auto;
     border: 1px solid black;
     padding: 3px 3px;
     margin: 25px 5px;
@@ -50,7 +46,6 @@ input {
 .input {
     margin: 15px auto;
     display: block;
-    
 }
 
 #addnewbook_legend {
