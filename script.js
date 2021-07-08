@@ -9,7 +9,6 @@ class BookList {
     this.BookListCollection = [];
   }
 
-  /* eslint-disable */
   AddBook(Book) {
     this.BookListCollection.push(Book);
     const TitleP = document.createElement('p');
@@ -26,18 +25,16 @@ class BookList {
     document.getElementById('list_container').appendChild(BookContainer).appendChild(AuthorP);
     document.getElementById('list_container').appendChild(BookContainer).appendChild(RButton);
   }
-  /* eslint-enable */
 
   RemoveBook(BookId) {
     const BookContainer = document.getElementById(BookId);
     BookContainer.parentNode.removeChild(BookContainer);
     const BooksNew = [];
-    /* eslint-disable */
     for (const i in this.BookListCollection) {
       if (this.BookListCollection[i].id !== BookId) {
         BooksNew.push(this.BookListCollection[i]);
       }
-      /* eslint-enable */
+
     }
     this.BookListCollection = BooksNew;
     localStorage.clear();
@@ -51,7 +48,6 @@ class BookList {
   }
 
   ShowBooks() {
-    /* eslint-disable */
     for (let i in this.BookListCollection) {
       const newdiv = document.createElement('div');
       newdiv.setAttribute('id', this.BookListCollection[i].id);
@@ -69,7 +65,6 @@ class BookList {
     }
   }
 }
-/* eslint-enable */
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -79,7 +74,7 @@ class Book {
 }
 let NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
-/* eslint-disable */
+// eslint-disable-next-line no-unused-vars
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
@@ -88,9 +83,7 @@ function AddNewbook() {
   NewBookCollection.AddBook(NewBook);
   NewBookCollection.AddToStorage();
 }
-/* eslint-enable */
-/* eslint-disable */
+// eslint-disable-next-line no-unused-vars
 function Clear(params) {
   NewBookCollection.clear();
 }
-/* eslint-enable */
