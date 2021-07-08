@@ -70,13 +70,7 @@ class BookList {
   }
 }
 /* eslint-enable */
-class Book {
-  constructor(title, author, id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
+
 let NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
 /* eslint-disable */
