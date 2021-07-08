@@ -7,6 +7,7 @@ class BookList {
     document.getElementById('list_container').innerHTML='';
     this.BookListCollection=[];
   }
+  
   AddBook(Book) {
     this.BookListCollection.push(Book);
     let TitleP = document.createElement('p');
