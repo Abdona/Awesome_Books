@@ -49,8 +49,7 @@ class BookList {
   }
 
   ShowBooks()
-   {
-     
+   {  
   // /* eslint-disable */
   for (let i in this.BookListCollection)
   {
