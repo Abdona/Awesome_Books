@@ -3,7 +3,7 @@
 > This project is a presentation of working with Javascript objects 
 
 # Bot Preview
-![Web preview](cropedweb.jpeg)
+![Web preview](webapp_screenshot.png)
 
 ## Built With
 
@@ -26,7 +26,7 @@
 
 👤 **Anass**
 
-- Twitter: [@twitterhandle](https://twitter.com/rockerbell)
+- Twitter: [@twitter](https://twitter.com/rockerbell)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/anass-tantane/)
 - GitHub: [@github](https://github.com/rockerbell)
 
