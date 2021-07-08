@@ -2,6 +2,7 @@ class BookList {
   constructor(Books) {
     this.BookListCollection = Books;
   }
+  
   clear() {
     localStorage.clear('library');
     document.getElementById('list_container').innerHTML = '';
