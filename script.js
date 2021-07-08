@@ -44,7 +44,7 @@ class BookList {
     document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
   }}
    RemoveBook(BookId) {
-     alert('ddd')
+    alert('dddd')
     const BookContainer = document.getElementById(BookId);
     BookContainer.parentNode.removeChild(BookContainer);
     let BooksNew=[];
