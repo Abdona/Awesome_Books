@@ -9,18 +9,21 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb-base/legacy"],
   "rules": {
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
+    
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
-    }]
+    }],
+    "max-classes-per-file": "off"
   },
   "ignorePatterns": [
     "dist/",
     "build/"
   ]
+
   
 }
