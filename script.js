@@ -66,7 +66,6 @@ class Book {
  /* eslint-enable */
 const NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
-// eslint-disable-next-line no-unused-vars
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
@@ -77,7 +76,19 @@ function AddNewbook() {
   NewBookCollection.addBook(NewBook);
   NewBookCollection.AddToStorage();
 }
-// eslint-disable-next-line no-unused-vars
-function Clear(params) {
+function Clear() {
   NewBookCollection.clear();
 }
+
+function BookListpage() {
+  document.getElementById('list_container').style.display = 'block';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+}
+function AddBookList() {
+  document.getElementById('AddNewbook_container').style.display = 'block';
+  document.getElementById('list_container').style.display = 'none';
+}
+document.getElementById('AddNewbook').onclick = AddNewbook;
+document.getElementById('Clear').onclick = Clear;
+document.getElementById('BookList').onclick = BookListpage;
+document.getElementById('Add Book').onclick = AddBookList;
