@@ -2,8 +2,8 @@
 
 > This project is a presentation of working with Javascript objects 
 
-# Bot Preview
-![Web preview](webapp_screenshot.png)
+# Web Preview
+![Web preview](BookAwesome.jpeg)
 
 ## Built With
 
