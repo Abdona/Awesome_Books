@@ -1,27 +1,69 @@
 body {
   background-color: #fff;
-  width: 50%;
-  margin: auto;
+  justify-content: center;
+  padding: 5px 5px;
+  background-image: url(alfons-morales-YLSwjSy7stw-unsplash.jpg);
+  background-size: contain;
 }
 
 h1 {
-  color: blue;
   text-align: center;
-}
-
-.InputContainer {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-between;
-}
-
-.InputContainer h1 {
   color: black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
 }
 
 #list_container {
-  border: 3px solid black;
+  background-color: blanchedalmond;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  height: 250px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px 20px;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.rmv-btn {
+  width: 65px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px black;
+}
+
+input {
+  width: 450px;
+  height: 25px;
+  text-align: center;
+  box-shadow: 7px 5px 2px black;
+  display: flex;
+  border: 1px solid black;
+  padding: 3px 3px;
+  margin: 25px 5px;
+}
+
+.input {
+  margin: 15px auto;
+  display: block;
+}
+
+#addnewbook_legend {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+#AddNewbook_container {
+  margin: 10px auto;
+  width: 600px;
+  text-align: center;
+  border-top: 2px solid black;
+}
+
+.btn {
+  width: 60px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px black;
 }

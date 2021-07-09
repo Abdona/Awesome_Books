@@ -9,12 +9,15 @@
 </head>
 <body>
     <h1>Awesome Books</h1>
-    <div id="list_container" ></div>
-    <div class="InputContainer">
-        <h1>Add a new Book</h1>
-    <input type="text" id="Title" placeholder="Title">
-    <input type="text" id="Author" placeholder="Author">
-    <button id="AddNewbook">Add</button> <button id="Clear">Clear</button></div>
+    
+    <p id="BooksArray"></p> 
+    <div class="BooksContainer">
+    <div id="list_container" ></div></div>
+    <div id="AddNewbook_container">
+    <p id="addnewbook_legend">Add new book</p>
+    <input type="text" id="Title" class="input" placeholder="Title">
+    <input type="text" id="Author" class="input" placeholder="Author">
+    <button onclick="AddNewbook()" class="btn add-btn">Add</button> <button onclick="Clear()" class="btn clear-btn">Clear</button></div>
     <script type = "text/javascript" src="script.js"></script> 
 </body> 
 </html>
