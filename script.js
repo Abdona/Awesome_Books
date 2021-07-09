@@ -52,20 +52,7 @@ class BookList {
   /* eslint-disable */
   ShowBooks() {
     for (const i in this.bookListCollection) {
-      const newdiv = document.createElement('div');
-      newdiv.setAttribute('id', this.bookListCollection[i].id);
-      const title = document.createElement('p');
-      const author = document.createElement('p');
-      const RemoveButt = document.createElement('button');
-      RemoveButt.addEventListener('click', () => { this.RemoveBook(this.bookListCollection[i].id); });
-      RemoveButt.textContent = 'Remove';
-      RemoveButt.setAttribute('id', this.bookListCollection[i].id);
-      RemoveButt.setAttribute('class','rmv-btn')
-      title.innerHTML = `Title:   ${this.bookListCollection[i].title}`;
-      author.innerHTML = `Author:   ${this.bookListCollection[i].author}`;
-      document.getElementById('list_container').appendChild(newdiv).appendChild(title);
-      document.getElementById('list_container').appendChild(newdiv).appendChild(author);
-      document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
+      this.addBook(this.bookListCollection[i])
     }
   }
 }
