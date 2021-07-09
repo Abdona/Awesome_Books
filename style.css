@@ -75,3 +75,34 @@ input {
   background-color: #fff;
   box-shadow: 5px 5px 2px black;
 }
+
+.fs-1 {
+  font-size: 40px;
+}
+
+
+.top-nav {
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+.top-nav div {
+  padding: 10px 10px;
+}
+
+.left-nav  a {
+  
+  text-decoration: none;
+  color: #fff;
+}
+
+.right-nav a {
+  border-right: 10px solid black;
+  padding-right: 5px;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #fff;
+}
