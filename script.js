@@ -81,14 +81,37 @@ function Clear() {
 }
 
 function BookListpage() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'none';
   document.getElementById('list_container').style.display = 'block';
   document.getElementById('AddNewbook_container').style.display = 'none';
 }
 function AddBookList() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'none';
   document.getElementById('AddNewbook_container').style.display = 'block';
   document.getElementById('list_container').style.display = 'none';
 }
+
+function contactus() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'block';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+  document.getElementById('list_container').style.display = 'none';
+}
+
+function main() {
+  document.getElementById('AwesomeBooks').style.display = 'block';
+  document.getElementById('ContactUs').style.display = 'none';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+  document.getElementById('list_container').style.display = 'none';
+}
+
+main();
+
+document.getElementById('AwesomeBooksProject').onclick = main;
+document.getElementById('Contact-us').onclick = contactus;
 document.getElementById('AddNewbook').onclick = AddNewbook;
 document.getElementById('Clear').onclick = Clear;
 document.getElementById('BookList').onclick = BookListpage;
-document.getElementById('Add Book').onclick = AddBookList;
+document.getElementById('AddBook').onclick = AddBookList;

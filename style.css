@@ -17,8 +17,9 @@ h1 {
 }
 
 #AddNewbook_container h1 {
-  margin-top: 10px;
+  margin-top: 100px;
   width: 50%;
+  
 }
 
 #list_container {
@@ -27,9 +28,9 @@ h1 {
   text-align: center;
   display: block;
   height: 250px;
-  margin: auto;
+  margin: 100px auto;
   border: 1px solid #ccc;
-  padding: 20px 20px;
+  padding: 50px 20px;
   width: 50%;
   overflow-y: scroll;
 }
@@ -80,6 +81,14 @@ input {
   font-size: 40px;
 }
 
+.fs-2 {
+  font-size: 35px;
+}
+
+.fs-3 {
+  font-size: 30px;
+}
+
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -107,4 +116,17 @@ input {
 
 .top-nav div a:hover {
   color: red;
+}
+
+#ContactUs {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 100px 0;
+}
+
+#AwesomeBooks {
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
 }
