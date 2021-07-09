@@ -80,7 +80,6 @@ input {
   font-size: 40px;
 }
 
-
 .top-nav {
   border: 3px solid #fff;
   display: flex;
@@ -93,8 +92,7 @@ input {
   padding: 10px 10px;
 }
 
-.left-nav  a {
-  
+.left-nav a {
   text-decoration: none;
   color: #fff;
 }
