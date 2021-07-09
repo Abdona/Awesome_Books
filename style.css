@@ -1,3 +1,27 @@
+/* text-align: center;
+color: black;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 30px;
+font-size: 30px;
+}
+
+#list_container {
+@@ -30,7 +30,6 @@ h1 {
+box-shadow: 5px 5px 2px black;
+}
+
+
+input {  
+width: 450px;
+height: 25px;
+@@ -64,4 +63,4 @@ input {
+height: 30px;
+background-color: #fff;
+box-shadow: 5px 5px 2px black;
+} 
+} */
+
+
 body {
   background-color: #fff;
   justify-content: center;
