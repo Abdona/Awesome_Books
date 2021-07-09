@@ -111,7 +111,9 @@ function main() {
 
 main();
 function setTimeDate() {
+  /* eslint-disable */
   const DateTime = luxon.DateTime;
+  /* eslint-enable */
   const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
   document.getElementById('Datetime').innerHTML = now;
 }
