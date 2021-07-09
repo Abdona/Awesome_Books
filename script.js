@@ -1,3 +1,5 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-undef */
 /* eslint max-classes-per-file: ["error", 2] */
 class BookList {
   constructor(Books) {
@@ -108,7 +110,13 @@ function main() {
 }
 
 main();
+function setTimeDate() {
+  const DateTime = luxon.DateTime;
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
+  document.getElementById('Datetime').innerHTML = now;
+}
 
+setTimeDate();
 document.getElementById('AwesomeBooksProject').onclick = main;
 document.getElementById('Contact-us').onclick = contactus;
 document.getElementById('AddNewbook').onclick = AddNewbook;
