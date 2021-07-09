@@ -9,8 +9,16 @@ body {
 h1 {
   text-align: center;
   color: black;
+  width: 20%;
+  margin: auto;
+  background-color: blanchedalmond;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 30px;
+}
+
+#AddNewbook_container h1 {
+  margin-top: 10px;
+  width: 50%;
 }
 
 #list_container {
