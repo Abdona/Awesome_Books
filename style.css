@@ -6,6 +6,15 @@ body {
   background-size: contain;
 }
 
+#Datetime {
+  font-size: 1.4rem;
+  color: white;
+  background-color: black;
+  width: 286px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 h1 {
   text-align: center;
   color: black;
@@ -17,7 +26,7 @@ h1 {
 }
 
 #AddNewbook_container h1 {
-  margin-top: 10px;
+  margin-top: 100px;
   width: 50%;
 }
 
@@ -27,9 +36,9 @@ h1 {
   text-align: center;
   display: block;
   height: 250px;
-  margin: auto;
+  margin: 100px auto;
   border: 1px solid #ccc;
-  padding: 20px 20px;
+  padding: 50px 20px;
   width: 50%;
   overflow-y: scroll;
 }
@@ -80,27 +89,52 @@ input {
   font-size: 40px;
 }
 
+.fs-2 {
+  font-size: 35px;
+}
+
+.fs-3 {
+  font-size: 30px;
+}
+
 .top-nav {
-  border: 3px solid #fff;
   display: flex;
-  justify-content: center;
-  padding: 10px 10px;
-  margin: 10px 10px;
+  justify-content: space-between;
 }
 
 .top-nav div {
-  padding: 10px 10px;
+  padding: 2px 2px;
+  font-size: 10px;
 }
 
 .left-nav a {
+  background-color: blanchedalmond;
   text-decoration: none;
-  color: #fff;
+  color: black;
+  font-size: 1.2rem;
 }
 
 .right-nav a {
-  border-right: 10px solid black;
-  padding-right: 5px;
-  padding-left: 10px;
+  background-color: blanchedalmond;
+  margin-left: 10px;
+  font-size: 1.2rem;
   text-decoration: none;
+  color: black;
+}
+
+.top-nav div a:hover {
+  color: red;
+}
+
+#ContactUs {
   color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 100px 0;
+}
+
+#AwesomeBooks {
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
 }

@@ -1,3 +1,5 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-undef */
 /* eslint max-classes-per-file: ["error", 2] */
 class BookList {
   constructor(Books) {
@@ -66,7 +68,6 @@ class Book {
  /* eslint-enable */
 const NewBookCollection = new BookList(JSON.parse(localStorage.getItem('library')) || []);
 NewBookCollection.ShowBooks();
-// eslint-disable-next-line no-unused-vars
 function AddNewbook() {
   const title = document.getElementById('Title');
   const author = document.getElementById('Author');
@@ -77,7 +78,50 @@ function AddNewbook() {
   NewBookCollection.addBook(NewBook);
   NewBookCollection.AddToStorage();
 }
-// eslint-disable-next-line no-unused-vars
-function Clear(params) {
+function Clear() {
   NewBookCollection.clear();
 }
+
+function BookListpage() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'none';
+  document.getElementById('list_container').style.display = 'block';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+}
+function AddBookList() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'none';
+  document.getElementById('AddNewbook_container').style.display = 'block';
+  document.getElementById('list_container').style.display = 'none';
+}
+
+function contactus() {
+  document.getElementById('AwesomeBooks').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'block';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+  document.getElementById('list_container').style.display = 'none';
+}
+
+function main() {
+  document.getElementById('AwesomeBooks').style.display = 'block';
+  document.getElementById('ContactUs').style.display = 'none';
+  document.getElementById('AddNewbook_container').style.display = 'none';
+  document.getElementById('list_container').style.display = 'none';
+}
+
+main();
+function setTimeDate() {
+  /* eslint-disable */
+  const DateTime = luxon.DateTime;
+  /* eslint-enable */
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
+  document.getElementById('Datetime').innerHTML = now;
+}
+
+setTimeDate();
+document.getElementById('AwesomeBooksProject').onclick = main;
+document.getElementById('Contact-us').onclick = contactus;
+document.getElementById('AddNewbook').onclick = AddNewbook;
+document.getElementById('Clear').onclick = Clear;
+document.getElementById('BookList').onclick = BookListpage;
+document.getElementById('AddBook').onclick = AddBookList;

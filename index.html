@@ -10,18 +10,15 @@
 <body>
     <nav class="top-nav">
         <div class="left-nav fs-1">
-            <a href="#" class="fs-1">Awesome Books</a>
+            <a href="#" class="fs-1" id="AwesomeBooksProject">Awesome Books</a>
         </div>
         <div class="right-nav">
-            <a href="#" class="fs-1">List</a>
-            <a href="#" class="fs-1">Add new</a>
-            <a href="#" class="fs-1">Contact</a>
+            <a href="#" id="BookList" class="fs-1">BOOK LIST</a>
+            <a href="#" id="AddBook" class="fs-1">ADD BOOK</a>
+            <a href="#" id="Contact-us" class="fs-1">CONTACT US</a>
         </div>
     </nav>
-
-
-    <h1>Awesome Books</h1>
-    
+    <div id="Datetime"></div>
     <p id="BooksArray"></p> 
     <div class="BooksContainer">
     <div id="list_container" ></div></div>
@@ -29,7 +26,27 @@
     <h1>Add new book</h1>
     <input type="text" id="Title" class="input" placeholder="Title">
     <input type="text" id="Author" class="input" placeholder="Author">
-    <button onclick="AddNewbook()" class="btn add-btn">Add</button> <button onclick="Clear()" class="btn clear-btn">Clear</button></div>
-    <script type = "text/javascript" src="script.js"></script> 
+    <button id="AddNewbook" class="btn add-btn">Add</button> <button id="Clear" class="btn clear-btn">Clear</button></div>
+    <div id="AwesomeBooks">
+        <fieldset>
+            <legend class="fs-1">Project Description :</legend>
+            <p class="fs-3">This project was created to present the use of Javascript classes, objects along the use of HTML/CSS to create dynamic Webpage in a fun way.</p>
+        </fieldset>
+    </div>
+    <div id="ContactUs">
+        <p id ="contact-title" class="fs-1">Contact information</p>
+        <p class="fs-2">If you have any feedback or questions you can reach to us on:</p>
+        <div>
+           <ul>
+               <li class="fs-3">Our email : awesomebook@mail.com</li>
+               <li class="fs-3">Our phone number : 067806932145</li>
+               <li class="fs-3">Our Adress : home street, 9923UC, 66000</li>
+           </ul>
+        </div>
+
+    </div>
+    <script src="luxon.min.js"></script>
+    <script src="script.js"></script> 
+   
 </body> 
 </html>
