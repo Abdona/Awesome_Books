@@ -1,3 +1,106 @@
 body {
   background-color: #fff;
+  justify-content: center;
+  padding: 5px 5px;
+  background-image: url(alfons-morales-YLSwjSy7stw-unsplash.jpg);
+  background-size: contain;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  width: 20%;
+  margin: auto;
+  background-color: blanchedalmond;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+#AddNewbook_container h1 {
+  margin-top: 10px;
+  width: 50%;
+}
+
+#list_container {
+  background-color: blanchedalmond;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  height: 250px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px 20px;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.rmv-btn {
+  width: 65px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px black;
+}
+
+input {
+  width: 450px;
+  height: 25px;
+  text-align: center;
+  box-shadow: 7px 5px 2px black;
+  display: flex;
+  border: 1px solid black;
+  padding: 3px 3px;
+  margin: 25px 5px;
+}
+
+.input {
+  margin: 15px auto;
+  display: block;
+}
+
+#addnewbook_legend {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+#AddNewbook_container {
+  margin: 10px auto;
+  width: 600px;
+  text-align: center;
+  border-top: 2px solid black;
+}
+
+.btn {
+  width: 60px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px black;
+}
+
+.fs-1 {
+  font-size: 40px;
+}
+
+.top-nav {
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+.top-nav div {
+  padding: 10px 10px;
+}
+
+.left-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.right-nav a {
+  border-right: 10px solid black;
+  padding-right: 5px;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #fff;
 }

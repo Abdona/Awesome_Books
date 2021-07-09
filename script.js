@@ -18,6 +18,7 @@ class BookList {
     RButton.addEventListener('click', () => { this.RemoveBook(Book.id); });
     RButton.innerHTML = 'Remove';
     RButton.setAttribute('id', Book.id);
+    RButton.setAttribute('class', 'rmv-btn');
     const BookContainer = document.createElement('div');
     BookContainer.setAttribute('id', Book.id);
     TitleP.innerHTML = `Title:   ${Book.title}`;
@@ -51,19 +52,7 @@ class BookList {
   /* eslint-disable */
   ShowBooks() {
     for (const i in this.bookListCollection) {
-      const newdiv = document.createElement('div');
-      newdiv.setAttribute('id', this.bookListCollection[i].id);
-      const title = document.createElement('p');
-      const author = document.createElement('p');
-      const RemoveButt = document.createElement('button');
-      RemoveButt.addEventListener('click', () => { this.RemoveBook(this.bookListCollection[i].id); });
-      RemoveButt.textContent = 'remove';
-      RemoveButt.setAttribute('id', this.bookListCollection[i].id);
-      title.innerHTML = `Title:   ${this.bookListCollection[i].title}`;
-      author.innerHTML = `Author:   ${this.bookListCollection[i].author}`;
-      document.getElementById('list_container').appendChild(newdiv).appendChild(title);
-      document.getElementById('list_container').appendChild(newdiv).appendChild(author);
-      document.getElementById('list_container').appendChild(newdiv).appendChild(RemoveButt);
+      this.addBook(this.bookListCollection[i])
     }
   }
 }
@@ -83,6 +72,8 @@ function AddNewbook() {
   const author = document.getElementById('Author');
   const IdBook = Math.floor(Math.random() * 1000);
   const NewBook = new Book(title.value, author.value, IdBook);
+  title.value = '';
+  author.value = '';
   NewBookCollection.addBook(NewBook);
   NewBookCollection.AddToStorage();
 }

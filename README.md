@@ -3,7 +3,7 @@
 > This project is a presentation of working with Javascript objects 
 
 # Bot Preview
-![Web preview](cropedweb.jpeg)
+![Web preview](webapp_screenshot.png)
 
 ## Built With
 
