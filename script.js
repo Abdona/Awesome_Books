@@ -117,8 +117,8 @@ function setTimeDate() {
   const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
   document.getElementById('Datetime').innerHTML = now;
 }
-
 setTimeDate();
+setInterval(setTimeDate, 60000);
 document.getElementById('AwesomeBooksProject').onclick = main;
 document.getElementById('Contact-us').onclick = contactus;
 document.getElementById('AddNewbook').onclick = AddNewbook;
